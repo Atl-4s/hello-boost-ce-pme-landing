@@ -2,6 +2,7 @@ dist/
 .astro/
 node_modules/
 .vercel/
+.netlify/
 .env
 .env.local
 npm-debug.log*

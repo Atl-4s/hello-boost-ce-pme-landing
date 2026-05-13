@@ -1,0 +1,12 @@
+{
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/ce-pme",
+      "permanent": false
+    }
+  ]
+}
