@@ -1,0 +1,73 @@
+---
+const problems = [
+  {
+    title: "Le pouvoir d’achat devient un sujet central pour les salariés",
+    text: "Les équipes attendent des avantages visibles, utiles et faciles à utiliser au quotidien.",
+    icon: "wallet",
+  },
+  {
+    title: "Fidéliser et motiver coûte de plus en plus cher",
+    text: "Les petites entreprises doivent rester attractives sans multiplier les primes ou les dispositifs complexes.",
+    icon: "spark",
+  },
+  {
+    title: "Gérer des avantages salariés prend du temps",
+    text: "Un comité d’entreprise classique demande de l’administration, des négociations et un suivi régulier.",
+    icon: "chat",
+  },
+];
+---
+
+<section class="bg-white py-16 sm:py-20">
+  <div class="container-page">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.12em] text-mint-600">Le constat</p>
+      <h2 class="brand-gradient-text mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+        Les petites structures veulent agir, sans créer une usine à gaz
+      </h2>
+      <p class="mt-5 text-lg leading-8 text-ink-700">
+        Dirigeants, RH et responsables administratifs doivent répondre à une attente très
+        concrète des salariés : plus de valeur au quotidien, sans complexité supplémentaire.
+      </p>
+    </div>
+    <div class="mt-10 grid gap-4 md:grid-cols-3">
+      {
+        problems.map((problem) => (
+          <article class="rounded-[28px] border border-[#d8defe] bg-[#f6f8ff] p-6 text-center shadow-[0_18px_40px_rgba(33,44,100,0.06)]">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-[22px] bg-white shadow-[0_12px_26px_rgba(30,40,100,0.10)]">
+              {
+                problem.icon === "wallet" && (
+                  <svg viewBox="0 0 24 24" class="h-8 w-8 text-[#7e54ff]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3.5 7.5h14a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-14a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z"></path>
+                    <path d="M16.5 12h4"></path>
+                    <path d="M5 7.5V6a2.5 2.5 0 0 1 2.5-2.5h9"></path>
+                  </svg>
+                )
+              }
+              {
+                problem.icon === "spark" && (
+                  <svg viewBox="0 0 24 24" class="h-8 w-8 text-[#ff8f49]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m12 3 1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6L12 3Z"></path>
+                    <path d="m18.5 14 0.8 2.2 2.2 0.8-2.2 0.8-0.8 2.2-0.8-2.2-2.2-0.8 2.2-0.8 0.8-2.2Z"></path>
+                    <path d="m5 13 1 2.7L8.7 17 6 18l-1 2.7L4 18l-2.7-1L4 15.7 5 13Z"></path>
+                  </svg>
+                )
+              }
+              {
+                problem.icon === "chat" && (
+                  <svg viewBox="0 0 24 24" class="h-8 w-8 text-[#0c41ff]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 16.5 3.5 20v-5A6.5 6.5 0 0 1 10 8.5h4A6.5 6.5 0 0 1 20.5 15V15a6.5 6.5 0 0 1-6.5 6.5h-4a6.5 6.5 0 0 1-3-0.7Z"></path>
+                    <path d="M8.5 13h7"></path>
+                    <path d="M8.5 16h4.5"></path>
+                  </svg>
+                )
+              }
+            </div>
+            <h3 class="text-xl font-bold leading-snug text-navy-950">{problem.title}</h3>
+            <p class="mt-4 leading-7 text-ink-700">{problem.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

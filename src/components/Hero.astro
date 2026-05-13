@@ -1,0 +1,77 @@
+---
+import LeadForm from "./LeadForm.astro";
+---
+
+<section class="brand-gradient-soft relative overflow-hidden text-white">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(10,20,60,0.28),transparent_32%)]"></div>
+  <img
+    src="/assets/grille-images.png"
+    alt=""
+    class="pointer-events-none absolute right-[-14rem] top-[-3rem] hidden w-[58rem] max-w-none opacity-95 lg:block"
+    loading="eager"
+    decoding="async"
+  />
+
+  <div class="container-page relative pb-16 pt-6 lg:pb-24">
+    <header class="flex items-center justify-between gap-4">
+      <a href="/ce-pme" class="inline-flex items-center">
+        <img src="/assets/logo-helloboost.png" alt="Hello Boost" class="h-16 w-auto sm:h-20" />
+      </a>
+      <a
+        href="#lead-form-top"
+        data-track-cta
+        data-cta-location="header"
+        class="hidden rounded-full border border-white/40 px-5 py-2.5 text-sm font-bold transition hover:bg-white/10 sm:inline-flex"
+      >
+        Demander une démo
+      </a>
+    </header>
+
+    <div class="grid min-w-0 gap-10 pt-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-start lg:pt-14">
+      <div class="relative min-w-0">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-white/80 sm:text-base">
+          Avantages salariés pour TPE/PME
+        </p>
+        <h1 class="mt-5 text-[1.85rem] font-extrabold leading-[1.08] sm:text-5xl lg:text-6xl" style="max-width: min(680px, 82vw); overflow-wrap: anywhere;">
+          Offrez à vos salariés les avantages d’un comité d’entreprise, sans gestion interne
+        </h1>
+        <p class="mt-6 text-base leading-8 text-white/92 sm:text-xl" style="max-width: min(660px, 82vw);">
+          Hello Boost aide les TPE/PME à améliorer le pouvoir d’achat, fidéliser leurs équipes
+          et proposer des avantages concrets en quelques jours.
+        </p>
+
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <a
+            href="#lead-form-top"
+            data-track-cta
+            data-cta-location="hero"
+            class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-base font-bold text-navy-950 shadow-[0_18px_40px_rgba(8,16,55,0.18)] transition hover:bg-white/90"
+          >
+            Demander une démo
+          </a>
+          <a
+            href="#solution"
+            data-track-cta
+            data-cta-location="hero_secondary"
+            class="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3.5 text-base font-bold text-white transition hover:bg-white/10"
+          >
+            Découvrir la solution
+          </a>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3 text-sm font-semibold text-white/90">
+          <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">Mise en place rapide</span>
+          <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">Sans gestion lourde</span>
+          <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">Pensé pour les petites structures</span>
+        </div>
+
+      </div>
+
+      <div class="relative min-w-0 lg:pt-8">
+        <div class="hero-form-shell relative z-10 mx-auto lg:ml-auto">
+          <LeadForm id="lead-form-top" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

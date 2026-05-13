@@ -1,0 +1,10 @@
+dist/
+.astro/
+node_modules/
+.vercel/
+.env
+.env.local
+npm-debug.log*
+*.log
+*.pid
+screenshot-*.png

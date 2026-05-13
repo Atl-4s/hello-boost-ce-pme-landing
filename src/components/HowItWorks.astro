@@ -1,0 +1,43 @@
+---
+const steps = [
+  {
+    title: "Échange sur vos besoins",
+    text: "On identifie vos priorités, votre effectif et le niveau d’accompagnement attendu.",
+  },
+  {
+    title: "Mise en place de votre espace avantages",
+    text: "Votre espace est préparé avec les catégories adaptées et les informations utiles pour vos équipes.",
+  },
+  {
+    title: "Activation auprès de vos salariés",
+    text: "Vous lancez l’avantage avec un parcours clair et simple à comprendre pour les salariés.",
+  },
+];
+---
+
+<section id="fonctionnement" class="brand-gradient-soft py-16 text-white sm:py-20">
+  <div class="container-page">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.12em] text-white/75">Fonctionnement</p>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+        Une mise en place en trois temps
+      </h2>
+    </div>
+    <div class="mt-10 grid gap-4 md:grid-cols-3">
+      {
+        steps.map((step, index) => (
+          <article class="rounded-[28px] border border-white/18 bg-white/10 p-6 text-center backdrop-blur-sm">
+            <span class="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-lg font-extrabold text-[#b9058a]">
+              {index + 1}
+            </span>
+            <h3 class="mt-5 text-xl font-bold text-white">{step.title}</h3>
+            <p class="mt-4 leading-7 text-white/88">{step.text}</p>
+          </article>
+        ))
+      }
+    </div>
+    <p class="mt-6 text-center text-base font-semibold text-white">
+      Et surtout : vous n’avez absolument rien à gérer au quotidien.
+    </p>
+  </div>
+</section>

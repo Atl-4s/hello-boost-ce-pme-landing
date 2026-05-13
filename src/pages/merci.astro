@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Merci | Hello Boost"
+  description="Votre demande de démonstration Hello Boost a bien été reçue."
+  canonicalPath="/merci"
+>
+  <main class="min-h-[72vh] bg-sky-soft py-20">
+    <div class="container-page">
+      <div class="mx-auto max-w-2xl rounded-[28px] border border-sky-line bg-white p-8 text-center shadow-[0_18px_50px_rgba(7,20,47,0.08)] sm:p-10">
+        <p class="text-sm font-bold uppercase tracking-[0.12em] text-mint-600">Demande reçue</p>
+        <h1 class="brand-gradient-text mt-4 text-4xl font-extrabold tracking-tight">
+          Merci, votre demande a bien été envoyée
+        </h1>
+        <p class="mt-5 text-lg leading-8 text-ink-700">
+          Un conseiller Hello Boost va vous recontacter pour comprendre votre besoin et vous présenter la solution adaptée à votre entreprise.
+        </p>
+        <a
+          href="/ce-pme"
+          data-track-cta
+          data-cta-location="thank_you"
+          class="mt-8 inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-3.5 text-base font-bold text-white shadow-[0_14px_36px_rgba(245,138,61,0.35)] transition hover:bg-orange-500/90"
+        >
+          Retour à la page
+        </a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+  <script>
+    import { pushDataLayer } from "../lib/tracking";
+
+    pushDataLayer("thank_you_page_view", {
+      page_name: "merci",
+      audience: "ce_pme",
+    });
+  </script>
+</BaseLayout>

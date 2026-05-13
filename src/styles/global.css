@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --color-navy-950: #07142f;
+  --color-navy-900: #0b1f45;
+  --color-navy-800: #14315f;
+  --color-sky-soft: #eef7ff;
+  --color-sky-line: #d6eafe;
+  --color-mint-500: #24b47e;
+  --color-mint-600: #14895f;
+  --color-orange-500: #f58a3d;
+  --color-ink-900: #162033;
+  --color-ink-700: #46556e;
+  --color-ink-500: #68758b;
+  --color-brand-blue: #002ff4;
+  --color-brand-pink: #b9058a;
+  --color-brand-yellow: #ffc122;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #162033;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(36, 180, 126, 0.22);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(245, 138, 61, 0.7);
+  outline-offset: 3px;
+}
+
+.container-page {
+  width: min(1120px, calc(100vw - 32px));
+  margin-inline: auto;
+}
+
+.brand-gradient {
+  background: linear-gradient(135deg, #002ff4 0%, #b9058a 58%, #ffc122 100%);
+}
+
+.brand-gradient-soft {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.16), transparent 18%),
+    linear-gradient(135deg, #002ff4 0%, #b9058a 58%, #ffc122 100%);
+}
+
+.brand-gradient-text {
+  background: linear-gradient(135deg, #002ff4 0%, #b9058a 58%, #ff9b39 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand-frame {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 60px rgba(10, 11, 42, 0.18);
+}
+
+.brand-pill {
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+}
+
+.hero-form-shell {
+  width: min(320px, calc(100vw - 32px));
+}
+
+@media (min-width: 640px) {
+  .hero-form-shell {
+    width: min(420px, calc(100vw - 32px));
+  }
+}

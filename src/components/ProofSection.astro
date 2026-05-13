@@ -1,0 +1,66 @@
+---
+const testimonials = [
+  {
+    title: "Ils ont parfaitement compris nos enjeux.",
+    text: "Le Cercle des Indépendants, c’est bien plus qu’un espace avantages : c’est animé, vivant et nos adhérents l’utilisent vraiment. Nous sommes très satisfaits.",
+    source: "Union Dentaire",
+  },
+  {
+    title: "Une vraie différence pour attirer des adhérents.",
+    text: "Le Cercle comprend parfaitement la cible des indépendants. Cette offre nous a permis d’attirer de nouveaux adhérents et de renforcer notre réseau.",
+    source: "Fédération professionnelle",
+  },
+  {
+    title: "Une équipe réactive qui connaît les groupements.",
+    text: "Cela fait des années que nous travaillons avec le Cercle. Pour rien au monde nous ne changerions : équipe réactive, service de qualité et vraie compréhension des groupements d’indépendants.",
+    source: "Réseau professionnel",
+  },
+  {
+    title: "Un vrai levier de fidélisation pour nos adhérents.",
+    text: "Grâce à l’offre du Cercle, nous avons pu offrir des avantages à nos adhérents et même à leurs salariés. Un vrai plus pour notre fédération.",
+    source: "Association nationale",
+  },
+  {
+    title: "Enfin une solution adaptée à notre réalité.",
+    text: "Peu de temps, peu de budget mais une exigence de qualité : le Cercle a parfaitement répondu à notre besoin. Une solution efficace et simple à déployer.",
+    source: "Groupement professionnel",
+  },
+];
+---
+
+<section class="brand-gradient-soft overflow-hidden py-16 text-white sm:py-20">
+  <div class="container-page">
+    <h2 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl">Témoignages</h2>
+
+    <div class="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_320px]">
+      <div class="grid gap-8 sm:grid-cols-2 lg:col-span-2">
+        {
+          testimonials.map((testimonial) => (
+            <article class="border-white/22 sm:border-r sm:pr-7">
+              <h3 class="text-xl font-extrabold leading-snug">{testimonial.title}</h3>
+              <p class="mt-4 text-base font-semibold leading-6 text-white/92">{testimonial.text}</p>
+              <p class="mt-6 text-sm font-bold text-white/80">{testimonial.source}</p>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="relative hidden min-h-[360px] items-end justify-center lg:flex">
+        <div class="absolute bottom-[-7rem] right-[-4rem] h-[25rem] w-[25rem] rounded-full bg-white"></div>
+        <div class="relative z-10 mb-5 max-w-[260px] text-center">
+          <p class="brand-gradient-text text-4xl font-extrabold leading-tight">
+            Offrez ces avantages à vos salariés
+          </p>
+          <a
+            href="#lead-form-top"
+            data-track-cta
+            data-cta-location="testimonials"
+            class="mt-5 inline-flex text-sm font-extrabold text-ink-900 underline decoration-2 underline-offset-4"
+          >
+            Demander une démonstration
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

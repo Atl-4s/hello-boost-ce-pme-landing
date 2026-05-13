@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import ProblemSection from "../components/ProblemSection.astro";
+import SolutionSection from "../components/SolutionSection.astro";
+import BenefitsSection from "../components/BenefitsSection.astro";
+import AdvantageExamples from "../components/AdvantageExamples.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import ProofSection from "../components/ProofSection.astro";
+import BottomCTA from "../components/BottomCTA.astro";
+import FAQ from "../components/FAQ.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Hello Boost | Avantages salariés et CE pour TPE/PME"
+  description="Offrez les avantages d’un comité d’entreprise à vos salariés sans gestion interne. Une solution simple pour TPE/PME, RH et petits CE."
+  canonicalPath="/ce-pme"
+>
+  <main>
+    <Hero />
+    <ProblemSection />
+    <SolutionSection />
+    <BenefitsSection />
+    <AdvantageExamples />
+    <HowItWorks />
+    <ProofSection />
+    <BottomCTA />
+    <FAQ />
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,52 @@
+---
+const questions = [
+  {
+    question: "Est-ce adapté aux entreprises de moins de 50 salariés ?",
+    answer: "Oui. Hello Boost est pensé pour les TPE/PME et les petites structures qui veulent proposer des avantages sans monter une organisation interne complexe.",
+  },
+  {
+    question: "Est-ce compliqué à mettre en place ?",
+    answer: "Non. La mise en place est accompagnée et l’objectif est de garder un parcours simple pour l’entreprise comme pour les salariés.",
+  },
+  {
+    question: "Combien de temps faut-il pour activer l’espace avantages ?",
+    answer: "Le délai dépend de votre contexte, mais l’offre est conçue pour pouvoir être activée rapidement après l’échange de cadrage.",
+  },
+  {
+    question: "Est-ce que l’entreprise doit gérer les réductions ?",
+    answer: "Non. L’entreprise n’a pas vocation à négocier ou administrer chaque avantage au quotidien.",
+  },
+  {
+    question: "Est-ce que les salariés peuvent l’utiliser facilement ?",
+    answer: "Oui. Le parcours est construit pour être lisible, accessible et directement utile aux équipes.",
+  },
+  {
+    question: "Peut-on adapter l’offre à notre entreprise ?",
+    answer: "Oui. L’échange initial permet d’identifier vos priorités et de présenter une configuration adaptée à votre structure.",
+  },
+];
+---
+
+<section class="bg-white py-16 sm:py-20">
+  <div class="container-page">
+    <div class="max-w-3xl">
+      <p class="text-sm font-bold uppercase tracking-[0.12em] text-mint-600">FAQ</p>
+      <h2 class="brand-gradient-text mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+        Les questions fréquentes des dirigeants et équipes RH
+      </h2>
+    </div>
+    <div class="mt-10 grid gap-4 lg:grid-cols-2">
+      {
+        questions.map((item) => (
+          <details class="group rounded-[24px] border border-sky-line bg-sky-soft p-5">
+            <summary class="cursor-pointer list-none text-lg font-bold text-navy-950">
+              <span class="inline-flex w-[calc(100%-28px)] align-top">{item.question}</span>
+              <span class="inline-flex h-6 w-6 items-center justify-center rounded-lg bg-white text-sm text-navy-950 group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-4 leading-7 text-ink-700">{item.answer}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
